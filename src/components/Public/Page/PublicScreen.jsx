@@ -1,24 +1,31 @@
 import { useCallback, useEffect, useState } from 'react';
-import '../css/publicPage.css'
-import PublicScreenBeforeGamesStart from './PublicScreenBeforeGamesStart';
+import '../css/registro.css'
+import HeaderConvocatoria from '../components/HeaderConvocatoria';
+import Registro from '../components/Registro';
 
 const PublicScreen = () => {
 
-    const [data, setData] = useState(null);
+    const handleCrearCuenta = useCallback((data) => {
+        console.log('Crear cuenta:', data);
+        // Aquí puedes agregar la lógica para manejar la creación de cuenta
+    }
+, []);
+    const handleIniciarSesion = useCallback((data) => {
+        console.log('Iniciar sesión:', data);
+        // Aquí puedes agregar la lógica para manejar el inicio de sesión
+    }
+, []);
+    
 
-
-    const [overrideIniciado, setOverrideIniciado] = useState(false);
-
-
-
-    const targetDate = "2024-09-20T00:00:00"; // Fecha y hora del evento (20 de septiembre de 2024 a las 00:00)
-
-    // Si aún no ha llegado fechaInicio, eventoIniciado es false
-    const eventoIniciado = overrideIniciado || (targetDate ? new Date() >= targetDate : false);
-
-    return <PublicScreenBeforeGamesStart fechaEvento={targetDate} onFinalizado={() => setOverrideIniciado(true)} data={data}/>;
-   
-
+    return (
+         <div className="registro-page">
+              <HeaderConvocatoria />
+               <Registro
+                onCrearCuenta={handleCrearCuenta}
+                onIniciarSesion={handleIniciarSesion}
+              /> 
+            </div>
+    )
  
 }
 
