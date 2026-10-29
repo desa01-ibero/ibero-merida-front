@@ -1,0 +1,260 @@
+/* --- Paleta de la convocatoria --- */
+.registro-page {
+  --reg-bg: #f3efe8;
+  --reg-card-bg: #faf7f1;
+  --reg-border: #d9d3c7;
+  --reg-text: #1e1e1c;
+  --reg-text-muted: #4a4a45;
+  --reg-placeholder: #9a968c;
+  --reg-accent: #b4532f;
+  --reg-dark: #1f2a24;
+  --reg-btn-header: #6b7468;
+
+  min-height: 100vh;
+  background-color: var(--reg-bg);
+  color: var(--reg-text);
+  font-family: "DM Sans", sans-serif;
+}
+
+/* --- Header ---
+   No se usan .navbar / .nav-link para no heredar las reglas globales del
+   dashboard (src/styles/responsive.css y navbar.scss) */
+.registro-header {
+  border-bottom: 1px solid var(--reg-btn-header);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.registro-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.3rem 0;
+  color: var(--reg-text);
+  text-decoration: none;
+}
+
+.registro-brand:hover {
+  color: var(--reg-text);
+}
+
+.registro-menu-toggle {
+  border: 1px solid var(--reg-border);
+  border-radius: 0;
+  color: var(--reg-text);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.4rem 0.55rem;
+}
+
+.registro-logo {
+  font-family: "Alverata", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.registro-logo small {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.45rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.registro-brand-text {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 11px;
+  /* 110% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.registro-nav-link {
+  color: var(--Color-Bosque-600, #484E49);
+  text-align: center;
+
+  /* PROYECTO MÉRIDA/Cuerpo/Base */
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.25px;
+  /* 155% */
+  text-decoration: none;
+}
+
+.registro-nav-link:hover {
+  color: var(--reg-accent);
+}
+
+@media (min-width: 768px) {
+  .registro-nav-link {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+.registro-page .btn-registro-header {
+  background-color: var(--reg-btn-header);
+  border: 1px solid var(--reg-btn-header);
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.5rem;
+}
+
+.registro-page .btn-registro-header:hover {
+  background-color: var(--reg-dark);
+  border-color: var(--reg-dark);
+  color: #fff;
+}
+
+/* --- Contenido --- */
+.registro-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--reg-text);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.registro-back:hover {
+  color: var(--reg-accent);
+}
+
+.registro-eyebrow {
+  color: #000;
+
+  /* PROYECTO MÉRIDA/Auxiliar/Kicker/2 */
+  font-family: "DM Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17.05px;
+  /* 155% */
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+}
+
+.registro-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.registro-intro p {
+  color: var(--reg-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* --- Tarjeta del formulario --- */
+.registro-card {
+  background-color: var(--reg-card-bg);
+  border: 1px solid var(--reg-border);
+}
+
+.registro-tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--reg-border);
+}
+
+.registro-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0 0 0.75rem;
+  color: var(--reg-text-muted);
+  font-size: 0.85rem;
+}
+
+.registro-tab.is-active {
+  border-bottom-color: var(--reg-accent);
+  color: var(--reg-text);
+}
+
+.registro-label {
+  font-size: 0.72rem;
+  margin-bottom: 0.4rem;
+}
+
+.registro-input.form-control {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--reg-card-bg);
+  border: 1px solid var(--reg-border);
+  border-radius: 0;
+  color: var(--reg-text);
+  font-size: 0.8rem;
+  padding: 0.75rem 0.6rem;
+}
+
+.registro-input.form-control::placeholder {
+  font-family: "DM Sans", sans-serif;
+  color: var(--reg-placeholder);
+  font-size: 0.72rem;
+}
+
+.registro-input.form-control:focus {
+  border-color: var(--reg-text-muted);
+  box-shadow: none;
+}
+
+.registro-input.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.registro-check .form-check-input {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-color: var(--reg-text-muted);
+  border-radius: 0;
+}
+
+.registro-check .form-check-input:checked {
+  background-color: var(--reg-dark);
+  border-color: var(--reg-dark);
+}
+
+.registro-check .form-check-label {
+  font-size: 0.72rem;
+  padding-left: 0.25rem;
+  padding-top: 0.15rem;
+}
+
+.registro-nota {
+  border-left: 2px solid var(--reg-accent);
+  color: var(--reg-text-muted);
+  font-size: 0.6rem;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+}
+
+.registro-page .btn-registro-submit {
+  background-color: var(--reg-dark);
+  border: 1px solid var(--reg-dark);
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.8rem 1rem;
+}
+
+.registro-page .btn-registro-submit:hover,
+.registro-page .btn-registro-submit:focus {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+
+.img-logo {
+  max-width: 100px;
+  height: auto;
+}
