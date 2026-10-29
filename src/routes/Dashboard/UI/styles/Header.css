@@ -1,0 +1,24 @@
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #FFF;
+  box-shadow: 0 8px 28px 0 rgba(72, 89, 102, 0.10);
+  height: 70px;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding-left: 60px; /* Evita que el texto choque con el menú de hamburguesa */
+  }
+}
+
+.dashboard-header-title {
+  color: #24232F;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

@@ -1,0 +1,176 @@
+/* Login.css */
+
+.login-wrapper {
+  min-height: 100vh;
+  background: url(../../assets/img/fondologin.png) lightgray 50% / cover
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 542px;
+  height: 563px;
+  border-radius: 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.font-h1 {
+  color: var(--Text-color-1, #3c3b45);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.font-sub {
+  color: var(--Text-color-1, #3c3b45);
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Estilos para los labels */
+.glass-card label {
+  color: var(--Texto-claro, #4d5261);
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: -0.7px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.glass-card input[type="email"],
+.glass-card input[type="password"],
+.glass-card .form-control {
+  background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.8px;
+}
+
+/* Efecto al hacer clic (focus) */
+.glass-card input[type="email"],
+.glass-card input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.8);
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo del placeholder */
+.glass-card input[type="email"],
+.glass-card input[type="password"]:placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.ingresar-btn {
+  width: 212px;
+  height: 47px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.8px;
+  margin: 20px auto; /* Centra el botón horizontalmente y agrega un margen vertical */
+  opacity: 1; /* Opacidad completa */
+  border-radius: 100px; /* Bordes redondeados para un estilo más suave */
+  background: #1f263e;
+  color: #ffffff; /* Color de texto blanco para contraste */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cursor en forma de mano */
+}
+
+.ingresar-btn:hover {
+  background-color: #2a354f;
+  transform: translateY(-2px);
+  color: white;
+}
+
+.ingresar-btn:active{
+  transform: translateY(1px); /* Se hunde ligeramente */
+    background-color: #151b29; /* Se oscurece más */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.05s ease; /* Respuesta inmediata al clic */
+}
+
+.ingresar-btn:active:focus{
+  box-shadow: none;
+    background-color: #151b29;
+}
+
+.font-intersuj {
+  fill: #1e2633;
+  opacity: 0.8;
+}
+
+.custom-input {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+
+.custom-input::placeholder {
+  color: #adb5bd;
+}
+
+.btn-login {
+  background-color: #1e2633;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #2c3647;
+  opacity: 0.9;
+}
+
+.brand-text {
+  color: #D3D6E1;
+  letter-spacing: -3px;
+  line-height: 1;
+  font-family: Oxygen;
+}
+
+.brand-subtext {
+  color: #D3D6E1;
+  font-family: Oxygen;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 116.667% */
+  width: 409px;
+  height: 59px;
+}

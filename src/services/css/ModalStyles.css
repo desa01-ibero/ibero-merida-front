@@ -1,0 +1,80 @@
+/* Contenedor principal del modal */
+.my-custom-modal {
+  border-radius: 12px !important;
+  padding: 2.5rem 1.5rem !important;
+  width: 450px !important;
+  font-family: "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ELIMINAR EL CÍRCULO DEL ICONO */
+.my-icon-container {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Asegurar que el contenido del icono no tenga bordes */
+.my-icon-container .swal2-icon-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Título del modal */
+.my-custom-title {
+  color: #333 !important;
+  font-size: 1.35rem !important;
+  margin: 15px 0 !important;
+  padding: 0 !important;
+  font-family: "Oxygen", sans-serif !important;
+  font-weight: 400;
+}
+
+.my-custom-message {
+  font-size: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Oxygen", sans-serif !important;
+}
+
+/* Botón "Aceptar" estilo Dark */
+.my-confirm-button {
+  background-color: #24293e !important;
+  color: white !important;
+  border-radius: 50px !important;
+  padding: 12px 65px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  border: none !important;
+  margin-top: 25px !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'poppins', sans-serif !important;
+}
+
+.my-confirm-button:hover {
+  background-color: #1a1e2d !important;
+}
+
+.custom-error-list {
+  text-align: left; /* Las listas se leen mejor alineadas a la izquierda */
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.custom-error-list li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555; /* O el color que uses para el body */
+}
+
+.my-custom-message {
+  font-family: 'YourFont', sans-serif;
+  line-height: 1.5;
+}

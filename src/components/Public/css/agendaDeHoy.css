@@ -1,0 +1,275 @@
+.intersuj-agenda__title--days {
+    color: #000;
+
+    /* Pública mayúsculas */
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.intersuj-agenda__title--agendahoy {
+     color: var(--Turquoise, #212735);
+    font-family: Urbanist;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    text-transform: uppercase;
+     }
+
+.intersuj-agenda__competencias {
+    color: var(--Texto-claro, #4D5261);
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 111.111% */
+    letter-spacing: 2px;
+}
+
+.intersuj-agenda__title-dep-uni {
+    color: rgba(0, 0, 0, 0.50);
+
+    /* Pública mayúsculas */
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.intersuj-agenda__titleDeporteCard {
+    color: #0A0A14;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 125% */
+}
+
+.intersuj-agenda__lugarCard {
+    color: #6B7280;
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 114.286% */
+}
+
+/* --- Paginador Minimalista --- */
+.intersuj-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    user-select: none;
+}
+
+.intersuj-pagination__arrow {
+    background: none;
+    border: none;
+    color: #212529;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.intersuj-pagination__arrow:disabled {
+    color: #b0b8c4;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.intersuj-pagination__page {
+    background: none;
+    border: none;
+    font-family: "Urbanist", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+}
+
+.intersuj-pagination__page--active {
+    color: #8bb5fc;
+}
+
+.intersuj-pagination__ellipsis {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+    padding: 4px 4px;
+}
+
+/* --- DatePicker Popup Fixes --- */
+.react-datepicker-popper {
+    z-index: 9999 !important;
+}
+
+.react-datepicker {
+    border: none !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 16px !important;
+    font-family: "Oxygen", sans-serif !important;
+    overflow: hidden;
+}
+
+.react-datepicker__header {
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #e9ecef !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+}
+
+.intersuj-hero__live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(220, 40, 40, 0.85);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 20px;
+
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+}
+
+.intersuj-agenda__proximo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--Turquoise, #212735);
+    font-family: Oxygen;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 145.455% */
+    letter-spacing: 0.6px;
+    padding: 2px 4px;
+    border-radius: 21243700px;
+    border: 1px solid #9DE7F1;
+    background: #9DE7F1;
+
+}
+
+.intersuj-agenda__finalizo {
+    color: #99A1AF;
+    text-align: center;
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 114.286% */
+}
+
+.custom-select__control,
+.custom-select__menu,
+.custom-select__multi-value,
+.custom-select__input {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.btn-apply-filters {
+    background-color: #A5C0F3;
+    color: #1F263E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    white-space: nowrap;
+}
+
+.btn-apply-filters:hover {
+    background-color: #8EABDF;
+    box-shadow: 0 4px 10px rgba(165, 192, 243, 0.3);
+}
+
+.intersuj-agenda__hora {
+    color: #0A0A14;
+    text-align: center;
+    font-family: Oxygen;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+.intersuj-agenda__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--Turquoise, #212735);
+    font-family: Oxygen;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 145.455% */
+    letter-spacing: 0.6px;
+    padding: 4px 6px;
+    border-radius: 21243700px;
+    border: 1px solid #F4F7FF;
+    background: #F4F7FF;
+    text-align: center !important;
+    width: 96%;
+}
+
+.span-enfrentamiento {
+    color: var(--Turquoise, #363E50);
+    font-family: Urbanist;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    display: flex;
+    height: 11px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+}
+
+/* --- Responsive Card Padding --- */
+.intersuj-agenda__card {
+    padding: 1rem !important;
+}
+
+@media (min-width: 576px) {
+    .intersuj-agenda__card {
+        padding: 15px 80px 15px 83px !important;
+    }
+}

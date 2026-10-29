@@ -1,0 +1,160 @@
+.intersuj-before__bg {
+  min-height: 87vh;
+  width: 100%;
+  position: relative;
+  background:
+    url(/src/assets/img/fondoBefore.png) #14181f 0px -41.714px / 100% 129.9% no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Oxygen', 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 6rem 1.5rem 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.intersuj-before__content {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tag Pill Superior */
+.intersuj-before__tag {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.intersuj-before__dot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Título INTERSUJ */
+.intersuj-before__title {
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.intersuj-before__title--solid {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 54px;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 2.5px #ffffff;
+
+}
+
+.intersuj-before__title--outline {
+  color: transparent;
+  -webkit-text-stroke: 1.8px #ffffff;
+  font-weight: 300;
+  font-size: 54px;
+  letter-spacing: 5px;
+
+}
+
+.intersuj-before__year {
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 100% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Descripción */
+.intersuj-before__description {
+  color: #CAD5E2;
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+/* Countdown Section */
+.intersuj-before__countdown-label {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+
+  /* Pública mayúsculas */
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.intersuj-before__countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.intersuj-before__countdown-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intersuj-before__countdown-card {
+  width: 78px;
+  height: 78px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+@media (min-width: 576px) {
+  .intersuj-before__countdown-card {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.intersuj-before__countdown-value {
+color: #FFF;
+text-align: center;
+font-family: Oxygen;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 66.667% */
+letter-spacing: 2px;
+text-transform: uppercase;
+  
+}
+
+.intersuj-before__countdown-unit {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  font-weight: 400;
+}

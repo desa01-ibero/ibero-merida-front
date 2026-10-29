@@ -1,0 +1,578 @@
+/* ========================================
+   INTERSUJ HOME - Hero Section Styles
+   ======================================== */
+
+/* --- Background & Container --- */
+.intersuj-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Oxygen", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.intersuj-logo{
+  height: 50px;
+  max-height: 50px;
+  width: auto;
+}
+
+.intersuj-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+ background: linear-gradient(rgb(0 0 0 / 35%), rgba(128, 128, 128, 0.5)), url(/src/assets/img/fondo.png) lightgray 0px -42.142px / 100% 109.9% no-repeat;
+ background-position: center 60px;
+}
+
+.intersuj-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rlinear-gradient(rgb(0 0 0 / 35%), rgba(128, 128, 128, 0.5)), url(/src/assets/img/fondo.png) lightgray 0px -42.142px / 100% 109.9% no-repeat
+}
+
+.intersuj-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 24px 40px;
+  flex: 1;
+}
+
+/* --- Navbar --- */
+.intersuj-hero__navbar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #212735;
+  box-shadow: 0 4px 4px 0 rgba(22, 20, 26, 0.25);
+}
+
+.intersuj-hero__navbar .navbar-brand {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.intersuj-hero__navbar .navbar-brand:hover {
+  color: #fff !important;
+}
+
+.intersuj-hero__logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.intersuj-hero__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.intersuj-hero__brand-name {
+  font-family: "Alberata", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.intersuj-hero__brand-edition {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+/* --- LIVE Badge --- */
+.intersuj-hero__live-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 60px;
+  margin-bottom: 28px;
+}
+
+.intersuj-hero__live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(220, 40, 40, 0.85);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.intersuj-hero__live-dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  animation: livePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.intersuj-hero__live-text {
+color: #E2BDDA;
+font-family: Oxygen;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+
+/* --- Hero Title --- */
+.intersuj-hero__subtitle {
+color: #FFF;
+
+/* Pública mayúsculas */
+font-family: Oxygen;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 20px; /* 142.857% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.intersuj-hero__title {
+  font-family: "Alberata", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.intersuj-hero__title--accent {
+  color: transparent;
+  /* Centro transparente */
+  -webkit-text-stroke: 1.5px #ffffff;
+  /* Grosor y color del borde (blanco) */
+}
+
+.intersuj-hero__year {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Oxygen;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  /* 62.5% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- Description --- */
+.intersuj-hero__description {
+  color: rgba(255, 255, 255, 0.90);
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px !important;
+
+}
+
+/* --- Countdown --- */
+.intersuj-hero__countdown-label {
+  color: rgba(255, 255, 255, 0.80);
+
+  /* Pública mayúsculas */
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.intersuj-hero__countdown {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.intersuj-hero__countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intersuj-hero__countdown-value {
+  color: #FFF;
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  /* 50% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.intersuj-hero__countdown-unit {
+  color: rgba(255, 255, 255, 0.60);
+
+  /* Pública mayúsculas */
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* --- Action Buttons --- */
+.intersuj-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.intersuj-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.intersuj-hero__btn:hover {
+  background: #212735;
+  color: #fff;
+  text-decoration: none;
+}
+
+.intersuj-hero__btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* --- Last Event Card --- */
+.intersuj-hero__section-label {
+  color: rgba(255, 255, 255, 0.80);
+
+  /* Pública mayúsculas */
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.intersuj-hero__event-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.intersuj-hero__event-sport {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.intersuj-hero__event-sport-icon {
+  font-size: 1.2rem;
+}
+
+.intersuj-hero__event-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.intersuj-hero__team {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intersuj-hero__team-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.intersuj-hero__team-score {
+  font-family: "Alberata", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.intersuj-hero__vs {
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.5;
+  text-transform: uppercase;
+  padding: 0 12px;
+}
+
+.memorias-span{
+  color: #000;
+  font-family: Oxygen;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.galeria-span{
+  color: var(--Turquoise, #212735);
+font-family: Urbanist;
+font-size: 36px;
+font-style: normal;
+font-weight: 900;
+line-height: 32px; /* 88.889% */
+text-transform: uppercase;
+}
+
+.btn-galeria{
+  color: #6B7280;
+text-align: center;
+font-family: Oxygen;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 166.667% */
+border-radius: 64px;
+border: 0;
+background: #ECEEF4;
+}
+
+.btn-galeria-active{
+  background: var(--Texto-claro, #4D5261);
+  color: var(--divisor-background, #F4F7FF);
+}
+
+.image-div{
+  border-radius: 16px;
+background: url(<path-to-image>) lightgray 0px -119.07px / 100% 357.237% no-repeat;
+}
+
+.btn-image-arrow{
+border-radius: 41px;
+border: 1px solid var(--divisores, #DFE5F9);
+background: #FFF;
+display: flex;
+width: 30px;
+height: 30px;
+justify-content: center;
+align-items: center;
+}
+
+.dia-active{
+  background: var(--Texto-claro, #4D5261);
+  color: var(--divisor-background, #F4F7FF);
+}
+
+.btn-todas{
+  border-radius: 64px;
+background: var(--Texto-claro, #4D5261);
+height: 24px;
+color: var(--divisor-background, #F4F7FF);
+text-align: center;
+font-family: Oxygen;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 166.667% */
+border: 0;
+padding-right: 10px;
+padding-left: 10px;
+}
+
+.container-cuadricula{
+  height: 100vh;
+  overflow-y: scroll;
+  margin-top: 20px !important;
+}
+
+.imagen-cuadricula{
+  height: 110px;
+}
+
+.span-volver{
+  color: var(--White, #FFF);
+font-family: Oxygen;
+font-size: 12px;
+font-style: normal;
+font-weight: 300;
+line-height: 12px; /* 100% */
+letter-spacing: 2px;
+padding: 20px 15px;
+cursor: pointer;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Tablets */
+@media (min-width: 576px) {
+  .intersuj-hero__content {
+    padding: 0 40px 60px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .intersuj-hero__title {
+    font-size: 6rem;
+  }
+
+  .intersuj-hero__year {
+    font-size: 3rem;
+  }
+
+  .intersuj-hero__countdown-value {
+    font-size: 4rem;
+  }
+
+  .intersuj-hero__description {
+    max-width: 450px;
+  }
+
+  .intersuj-hero__event-card {
+    max-width: 480px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .intersuj-hero__content {
+    max-width: 960px;
+    padding: 40px 60px 60px;
+  }
+
+  .intersuj-hero__title {
+    font-size: 6rem;
+  }
+
+  .intersuj-hero__year {
+    font-size: 3.5rem;
+  }
+
+  .intersuj-hero__countdown-value {
+    font-size: 4.5rem;
+  }
+
+  .intersuj-hero__countdown {
+    gap: 36px;
+  }
+
+  .intersuj-hero__description {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+
+  .intersuj-hero__event-card {
+    max-width: 520px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+
+
+  .intersuj-hero__title {
+    font-size: 7rem;
+    margin-bottom: 14px;
+  }
+  .intersuj-hero__year{
+    margin-bottom: 71px;
+  }
+
+  .intersuj-hero__description{
+    margin-bottom: 50px;
+  }
+
+  .intersuj-hero__countdown-label{
+    margin-bottom: 20px;
+  }
+
+  .intersuj-hero__actions{
+    margin-top:183px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .intersuj-hero__navbar .navbar-collapse {
+    width: 100%;
+  }
+
+  .intersuj-hero__navbar .navbar-nav {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+}

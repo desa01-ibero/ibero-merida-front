@@ -1,0 +1,114 @@
+.button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-button {
+  background-color: #1976d2;
+  color: white;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.custom-header {
+  background-color: rgba(136, 136, 136, 1) !important;
+  font-family: Praxis LT Pro;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.input-grid-ibero {
+  width: 135;
+  height: 38;
+  padding: 8px;
+  gap: 4px;
+  opacity: 1;
+  border-bottom-width: 1px;
+}
+
+.MuiDataGrid-footerContainer {
+  justify-content: center !important;
+  /* centra todo el footer */
+  margin-bottom: 10px;
+  border: 0 !important;
+}
+
+.MuiPagination-root {
+  justify-content: center !important;
+  /* Centra el paginador */
+  margin-top: 16px;
+  /* Espacio arriba */
+}
+
+/* Estilo de cada número/flecha */
+.MuiPaginationItem-root {
+  color: #1F263E;
+  text-align: center;
+  font-family: "PingFang SC";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  transition: all 0.2s ease;
+  border-radius: 4px !important;
+  border: 0.7px solid rgba(48, 55, 80, 0.08) !important;
+  background: #FFF;
+}
+
+/* Hover */
+.MuiPaginationItem-root:hover {
+  background-color: #91f4dacc !important;
+  /* verde agua suave */
+}
+
+/* Página activa */
+.MuiPaginationItem-root.Mui-selected {
+  background-color: #363E50 !important;
+  color: #24232F !important;
+  font-weight: bold;
+  border: none !important;
+  color: #FFF !important;
+  text-align: center;
+  font-family: 'Oxygen';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Flechas (prev/next) */
+.MuiPaginationItem-previousNext {
+  font-size: 16px;
+  color: #BAE6A8 !important;
+}
+
+/*.MuiPaginationItem-previousNext:hover {
+  color: #24232F;
+}*/
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .MuiDataGrid-root {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+}
