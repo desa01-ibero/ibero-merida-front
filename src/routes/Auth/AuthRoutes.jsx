@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { Authpage } from '../../Auth/pages/Authpage'
 import { AuthLayout } from './UI/AuthLayout';
 import { ChangePasswordPage } from '../../Auth/pages/ChangePasswordPage';
 import { RecuperarPassword } from '../../Auth/components/RecuperarPassword';
 import { RegistroUsuario } from '../../Auth/components/RegistroUsuario';
+import { Authpage } from '../../Auth/pages/Authpage';
 
 
 export const AuthRoutes = () => {
@@ -12,7 +12,7 @@ export const AuthRoutes = () => {
       <Route path="/" element={<AuthLayout />}>
         <Route index element={<Navigate to="/auth/login" replace />} />
         {/* Rutas anidadas que se renderizan dentro del Outlet de AuthLayout */}
-        <Route path="login" element={<Authpage />} />
+        <Route path="login" element={<Authpage/>} />
         {/* <Route path="register" element={<RegisterPage />} /> */}
         <Route path="cambio-password" element={<ChangePasswordPage />} />
         <Route path="recuperar-password" element={<RecuperarPassword />} />

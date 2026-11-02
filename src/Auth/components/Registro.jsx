@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
-import { FormCrearCuenta } from './FormCrearCuenta'
-import { FormIniciarSesion } from './FormIniciarSesion'
+import FormIniciarSesion from './FormIniciarSesion'
+import FormCrearCuenta from './FormCrearCuenta'
 
 const tabs = [
   { key: 'crear', label: 'Crear cuenta' },

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useDispatch } from "react-redux";
 import { startForgotPassword } from "../store/auth_thunk";
-import "../styles/loginIntersuj.css";
+import "../styles/login.css";
 
 export const RecuperarPassword = () => {
   const [isSent, setIsSent] = useState(false);

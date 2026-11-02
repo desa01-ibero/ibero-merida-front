@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import '../css/registro.css'
 import HeaderConvocatoria from '../components/HeaderConvocatoria';
-import Registro from '../components/Registro';
 
 const PublicScreen = () => {
 
@@ -20,10 +19,6 @@ const PublicScreen = () => {
     return (
          <div className="registro-page">
               <HeaderConvocatoria />
-               <Registro
-                onCrearCuenta={handleCrearCuenta}
-                onIniciarSesion={handleIniciarSesion}
-              /> 
             </div>
     )
  
