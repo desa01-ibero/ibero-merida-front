@@ -56,7 +56,7 @@ export const HeaderConvocatoria = () => {
                 </li>
               ))}
               <li className="ms-md-3">
-                <Link to="/registro" className="btn btn-registro-header">Participar</Link>
+                <Link to="/auth/login" className="btn btn-registro-header">Participar</Link>
               </li>
             </ul>
           </nav>
