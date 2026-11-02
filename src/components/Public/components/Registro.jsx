@@ -9,6 +9,21 @@ const tabs = [
   { key: 'login', label: 'Iniciar sesión' },
 ]
 
+// Texto de la columna informativa según la pestaña activa
+const intro = {
+  crear: {
+    titulo: ['Comienza tu', 'postulación.'],
+    parrafos: [
+      'Crea tu cuenta para guardar tu avance y enviar tu postulación antes del 4 de diciembre de 2026',
+      'Esta convocatoria está dirigida a personas egresadas de el Sistema Universitario Jesuita. Quien registre y presente la postulación en representación del despacho deberá cumplir con este requisito',
+    ],
+  },
+  login: {
+    titulo: ['Qué gusto verte de', 'nuevo.'],
+    parrafos: ['Ingresa para continuar tu candidatura donde la dejaste'],
+  },
+}
+
 export const Registro = ({ onCrearCuenta, onIniciarSesion }) => {
   const [tab, setTab] = useState('crear')
 
@@ -23,19 +38,13 @@ export const Registro = ({ onCrearCuenta, onIniciarSesion }) => {
         <div className="col-12 col-lg-5 registro-intro">
           <p className="registro-eyebrow mb-2">Portal para participantes</p>
           <h1 className="registro-title mb-4">
-            Comienza tu
+            {intro[tab].titulo[0]}
             <br />
-            postulación.
+            {intro[tab].titulo[1]}
           </h1>
-          <p className="mb-4">
-            Crea tu cuenta para guardar tu avance y enviar tu postulación antes
-            del 4 de diciembre de 2026
-          </p>
-          <p>
-            Esta convocatoria está dirigida a personas egresadas de el Sistema
-            Universitario Jesuita. Quien registre y presente la postulación en
-            representación del despacho deberá cumplir con este requisito
-          </p>
+          {intro[tab].parrafos.map((parrafo) => (
+            <p key={parrafo} className="mb-4">{parrafo}</p>
+          ))}
         </div>
 
         {/* Tarjeta de formulario */}

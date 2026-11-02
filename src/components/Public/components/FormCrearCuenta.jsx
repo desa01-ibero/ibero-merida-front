@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { FiArrowUpRight } from 'react-icons/fi'
@@ -43,6 +43,8 @@ export const FormCrearCuenta = ({ onSubmit }) => {
     },
     validationSchema,
     onSubmit: (values) => {
+      console.log(values);
+      
       onSubmit(values)
     },
   })

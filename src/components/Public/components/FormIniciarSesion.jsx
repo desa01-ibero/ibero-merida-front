@@ -5,7 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 
 const validationSchema = Yup.object({
   correo: Yup.string().trim().email('Ingresa un correo válido').required('El correo es requerido'),
-  password: Yup.string().required('La contraseña es requerida'),
+  password: Yup.string().min(8, 'Mínimo 8 caracteres').required('La contraseña es requerida'),
 })
 
 export const FormIniciarSesion = ({ onSubmit }) => {
@@ -27,7 +27,7 @@ export const FormIniciarSesion = ({ onSubmit }) => {
           id="login-correo"
           name="correo"
           type="email"
-          placeholder="Ej. nombre@despacho.com"
+          placeholder="nombre@despacho.com"
           className={`form-control registro-input ${hasError('correo') ? 'is-invalid' : ''}`}
           value={formik.values.correo}
           onChange={formik.handleChange}
@@ -42,7 +42,7 @@ export const FormIniciarSesion = ({ onSubmit }) => {
           id="login-password"
           name="password"
           type="password"
-          placeholder="Tu contraseña"
+          placeholder="Mínimo 8 caracteres"
           className={`form-control registro-input ${hasError('password') ? 'is-invalid' : ''}`}
           value={formik.values.password}
           onChange={formik.handleChange}
@@ -51,8 +51,13 @@ export const FormIniciarSesion = ({ onSubmit }) => {
         {hasError('password') && <div className="invalid-feedback">{formik.errors.password}</div>}
       </div>
 
+      <p className="registro-nota mb-3">
+        La información de esta sección será visible únicamente para el equipo
+        coordinador y nunca para el jurado
+      </p>
+
       <button type="submit" className="btn btn-registro-submit w-100" disabled={formik.isSubmitting}>
-        Iniciar sesión <FiArrowUpRight className="ms-3" />
+        Entrar al portal <FiArrowUpRight className="ms-3" />
       </button>
     </form>
   )
