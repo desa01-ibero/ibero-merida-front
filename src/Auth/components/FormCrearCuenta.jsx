@@ -2,10 +2,12 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { useDispatch } from 'react-redux'
+import { useApiData } from '../../hooks/useApiData'
 
 const validationSchema = Yup.object({
-  nombre: Yup.string().trim().required('El nombre es requerido'),
-  colectivo: Yup.string().trim().required('El nombre del colectivo es requerido'),
+  nombreCompleto: Yup.string().trim().required('El nombre es requerido'),
+  nombreColectivo: Yup.string().trim().required('El nombre del colectivo es requerido'),
   link: Yup.string().trim().url('Ingresa un link válido').required('El link es requerido'),
   correo: Yup.string().trim().email('Ingresa un correo válido').required('El correo es requerido'),
   confirmarCorreo: Yup.string()
@@ -22,8 +24,8 @@ const validationSchema = Yup.object({
 })
 
 const campos = [
-  { name: 'nombre', label: 'Nombre de quien registra', placeholder: 'Nombre y apellidos' },
-  { name: 'colectivo', label: 'Nombre del colectivo', placeholder: 'Ej. Estudio arquitectónico' },
+  { name: 'nombreCompleto', label: 'Nombre de quien registra', placeholder: 'Nombre y apellidos' },
+  { name: 'nombreColectivo', label: 'Nombre del colectivo', placeholder: 'Ej. Estudio arquitectónico' },
   { name: 'link', label: 'Link del colectivo / link de LinkedIn', placeholder: 'Copia y pega', type: 'url' },
   { name: 'correo', label: 'Correo electrónico', placeholder: 'Ej. nombre@despacho.com', type: 'email' },
   { name: 'confirmarCorreo', label: 'Confirmación de correo electrónico', placeholder: 'Ej. nombre@despacho.com', type: 'email' },
@@ -31,10 +33,13 @@ const campos = [
 ]
 
 export const FormCrearCuenta = ({ onSubmit }) => {
+const dispatch = useDispatch();
+const { sendData } = useApiData();
+
   const formik = useFormik({
     initialValues: {
-      nombre: '',
-      colectivo: '',
+      nombreCompleto: '',
+      nombreColectivo: '',
       link: '',
       correo: '',
       confirmarCorreo: '',
@@ -43,13 +48,39 @@ export const FormCrearCuenta = ({ onSubmit }) => {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      console.log("aaaaaaaaaaaaaaaaaaaaaaaaaa");
       
-      onSubmit(values)
+      handleSubmit(values);
     },
   })
 
   const hasError = (name) => formik.touched[name] && Boolean(formik.errors[name])
+
+  const handleSubmit = async (values) => {
+    console.log(values);
+    
+    const dataPost = {
+            nombreCompleto: values.nombreCompleto,
+            nombreColectivo: values.nombreColectivo,
+            link: values.link,
+            correo: values.correo,
+            password: values.password
+        } 
+
+    const response = await sendData(
+      `Auth/signup`,
+      "post",
+      dataPost,
+      {},
+      "Registrando usuario...",
+      {
+        title: "¡Éxito!",
+        message: "Tu cuenta se ha creado correctamente.",
+      },
+    );
+
+
+  };
 
   return (
     <form onSubmit={formik.handleSubmit} noValidate>
@@ -93,7 +124,7 @@ export const FormCrearCuenta = ({ onSubmit }) => {
         coordinador y nunca para el jurado
       </p>
 
-      <button type="submit" className="btn btn-registro-submit w-100" disabled={formik.isSubmitting}>
+      <button type="submit" className="btn btn-registro-submit w-100" >
         Crear cuenta y continuar <FiArrowUpRight className="ms-3" />
       </button>
     </form>
