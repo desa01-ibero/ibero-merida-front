@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { FiArrowUpRight } from 'react-icons/fi'
@@ -9,15 +9,30 @@ const validationSchema = Yup.object({
 })
 
 export const FormIniciarSesion = ({ onSubmit }) => {
+  // true cuando la API rechazó el login; se limpia al modificar correo o contraseña
+  const [errorLogin, setErrorLogin] = useState(false)
+
   const formik = useFormik({
     initialValues: { correo: '', password: '' },
     validationSchema,
-    onSubmit: (values) => {
-      onSubmit(values)
+    // async: Formik mantiene isSubmitting en true hasta que termine la petición
+    onSubmit: async (values) => {
+      const ok = await onSubmit(values)
+      if (!ok) setErrorLogin(true)
     },
   })
 
+  const handleChange = (e) => {
+    setErrorLogin(false)
+    formik.handleChange(e)
+  }
+
   const hasError = (name) => formik.touched[name] && Boolean(formik.errors[name])
+
+  const botonDeshabilitado = setErrorLogin || !formik.isValid ||!formik.dirty;
+
+
+    
 
   return (
     <form onSubmit={formik.handleSubmit} noValidate>
@@ -30,7 +45,7 @@ export const FormIniciarSesion = ({ onSubmit }) => {
           placeholder="nombre@despacho.com"
           className={`form-control registro-input ${hasError('correo') ? 'is-invalid' : ''}`}
           value={formik.values.correo}
-          onChange={formik.handleChange}
+          onChange={handleChange}
           onBlur={formik.handleBlur}
         />
         {hasError('correo') && <div className="invalid-feedback">{formik.errors.correo}</div>}
@@ -45,7 +60,7 @@ export const FormIniciarSesion = ({ onSubmit }) => {
           placeholder="Mínimo 8 caracteres"
           className={`form-control registro-input ${hasError('password') ? 'is-invalid' : ''}`}
           value={formik.values.password}
-          onChange={formik.handleChange}
+          onChange={handleChange}
           onBlur={formik.handleBlur}
         />
         {hasError('password') && <div className="invalid-feedback">{formik.errors.password}</div>}
@@ -56,7 +71,7 @@ export const FormIniciarSesion = ({ onSubmit }) => {
         coordinador y nunca para el jurado
       </p>
 
-      <button type="submit" className="btn btn-registro-submit w-100" disabled={formik.isSubmitting}>
+      <button type="submit" className="btn btn-registro-submit w-100" disabled={botonDeshabilitado}> 
         Entrar al portal <FiArrowUpRight className="ms-3" />
       </button>
     </form>

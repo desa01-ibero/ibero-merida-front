@@ -22,7 +22,7 @@ let RECAPTCHA_SECRET_KEY = import.meta.env.VITE_RECAPTCHA_SECRET_KEY;
 
 if (VITE_API_KEY === "local") {
   configGlobal = {
-    urlApiIbero: "https://localhost:7127/api/",
+    urlApiIbero: "https://localhost:7199/api/",
     // urlApiIbero: "https://controldocumentalvicerrectoriades.ibero.mx/back/api/",
     urlApiGestion: "https://administracion-ditdes.ibero.mx/back/api/",
       // urlApiGestion: "https://localhost:7284/api/",

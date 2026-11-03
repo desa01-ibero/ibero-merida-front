@@ -253,6 +253,16 @@
   color: #fff;
 }
 
+/* Bootstrap deja el fondo transparente en :disabled; se mantiene el color atenuado */
+.registro-page .btn-registro-submit:disabled {
+  background-color: var(--reg-dark);
+  border-color: var(--reg-dark);
+  color: #fff;
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
 
 .img-logo {
   max-width: 100px;

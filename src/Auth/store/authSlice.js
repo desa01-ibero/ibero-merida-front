@@ -4,14 +4,9 @@ const initialState = {
   isAuthenticated: false,
   mapping: {},
   routes: [],
-  profile: {},
-  profileId: null,
-  profilesApp: [],
   email: "",
-  isFirstLogin: null,
-  universityId: null,
-  eventId: null,
-  //checking: false,
+  nombre: "",
+  userName: "",
 };
 
 export const authSlice = createSlice({
@@ -21,21 +16,14 @@ export const authSlice = createSlice({
     login: (state, { payload }) => {
       
       const {
-        roleid,
-        perfil,
-        profileId,
         email,
-        isFirstLogin,
-        universityId,
-        eventId,
+        nombre,
+        userName,
       } = payload;
       state.isAuthenticated = true;
-      state.profile = perfil;
-      state.profileId = profileId;
       state.email = email;
-      state.isFirstLogin = isFirstLogin;
-      state.universityId = universityId;
-      state.eventId = eventId;
+      state.userName = userName;
+      state.nombre = nombre;
     },
     // loginCheckingFinish: (state) => {
     //   state.checking = true;

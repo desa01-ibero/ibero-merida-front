@@ -18,7 +18,7 @@ import { data } from "react-router-dom";
 import axios from "axios";
 
 
-export const startLoginDITCookies = ({
+export const startLoginCookies = ({
   emailOrUser,
   password,
   recaptchaToken,
@@ -27,28 +27,22 @@ export const startLoginDITCookies = ({
   return async (dispatch, getState) => {
     dispatch(uiStartLoading("Iniciando Sesión..."));
 
-    const idDetApp = appIdConfig;
-
-    const dataInfoPreLogin = {};
 
     const resp = await AxiosData({
-      endpoint: "Auth/DinamicLogin",
+      endpoint: "Auth/login",
       method: "POST",
-      body: { emailOrUser, password, idDetApp, recaptchaToken },
+      body: { correo: emailOrUser, password, captcha: recaptchaToken },
       queryString: null, // Puedes omitir esto si es null o undefined
-      useGestionApi: true,
+      useGestionApi: false,
       withCookie: false,
     });
+
     dispatch(uiFinishLoading());
 
-    console.log("Respuesta de DinamicLogin:", resp);
+    console.log("Respuesta de login:", resp.data);
 
     if (resp.respuestaStatus === TypeService.AxiosApiOk) {
-      const user = resp.data?.[0];
-      if (!user?.profileId) {
-        SnackbarUtilities.error("La respuesta de inicio de sesión no contiene un perfil válido.");
-        return;
-      }
+    
 
       // Despachamos login AQUÍ, solo cuando postlogin haya finalizado con éxito
       dispatch(
@@ -56,23 +50,20 @@ export const startLoginDITCookies = ({
           roleid: 0,
           isAuthenticated: true,
           perfil: {
-            nombre: user.profile,
-            userName: user.userName,
-            role: user.profile,
+            nombre: data?.nombrecompleto,
+            userName: data?.nombreColectivo,
           },
-          profileId: user.profileId,
-          email: user.email,
-          eventId: 0,
-          universityId: 0,
-          isFirstLogin: false,
+          email: data?.correo,
         }),
       );
 
       navigate("/dashboard");
       SnackbarUtilities.success(`Bienvenido/a ${user.profile} `);
-    } else {
-      dispatch(ManageAxiosResponse(resp));
+      return true;
     }
+
+    dispatch(ManageAxiosResponse(resp));
+    return false;
   };
 };
 
